@@ -5,16 +5,27 @@
 function app() {
 
     let app_variable = "parent to child";
-    child(app_variable); // prop
+
+    const handleDelete = function(dataFromChid){
+        console.log('dataFromChid', dataFromChid);
+    }
+
+
+    child(handleDelete);
 
 }
 
 
-function child(parentToChild) {
+function child(callback) {
 
-    console.log("parent to child", parentToChild);
+    const childData = 'child data';
+    callback(childData);
+
 
 }
 
 app();
+
+
+// truyen data tu child -> parent 
 
