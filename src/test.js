@@ -21,7 +21,6 @@ function child(callback) {
     const childData = 'child data';
     callback(childData);
 
-
 }
 
 app();
